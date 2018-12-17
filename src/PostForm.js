@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
-
 class PostForm extends Component {
-
- 
-
 
     handleSubmit = (e) => {
         e.preventDefault();
@@ -15,10 +11,9 @@ class PostForm extends Component {
         const data = {
           id: new Date(),
           title,
-          message
+          message,
+          editing: false
         };
-
-        // console.log(data);
 
         this.props.dispatch(
             {
